@@ -1,15 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
+  <!-- Bootstrap RTL CSS (will be dynamically switched) -->
+  <link id="bootstrap-css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet" integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv" crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Skip navigation link for keyboard accessibility */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #0071c5;
+      color: white;
+      padding: 8px;
+      text-decoration: none;
+      z-index: 100;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+    
+    /* Carousel custom styles for better visibility */
+    #sustainabilityCarousel .carousel-control-prev-icon,
+    #sustainabilityCarousel .carousel-control-next-icon {
+      background-color: rgba(0, 113, 197, 0.7);
+      border-radius: 50%;
+      padding: 20px;
+    }
+    
+    #sustainabilityCarousel .carousel-control-prev:hover .carousel-control-prev-icon,
+    #sustainabilityCarousel .carousel-control-next:hover .carousel-control-next-icon {
+      background-color: rgba(0, 113, 197, 0.9);
+    }
+    
+    /* Smooth transitions for accordion */
+    .accordion-button:not(.collapsed) {
+      background-color: #e7f3ff;
+      color: #0071c5;
+    }
+    
+    /* Modal backdrop enhancement */
+    .modal-backdrop {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  </style>
 </head>
 <body>
 
+  <!-- Skip Navigation Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- Header / Hero Section -->
-  <header>
+  <header role="banner" aria-label="Page header">
     <div>
       <img src="img/intel-header-logo.svg" alt="Intel Logo" />
       <!-- Main Heading -->
@@ -26,13 +73,16 @@
     </div>
   </header>
 
+  <!-- Main Content -->
+  <main id="main-content" role="main">
+
   <!-- Timeline Cards Section -->
-  <section>
+  <section aria-label="Sustainability timeline from 1968 to 2024">
     <!-- Card 1: 1968 -->
     <div>
       <h2>1968</h2>
       <h3>Intel Founded</h3>
-      <img src="img/1.jpg" alt="Placeholder Image" />
+      <img src="img/1.jpg" alt="Historic photo of Intel founders Robert Noyce and Gordon Moore" />
       <p>
         Robert Noyce and Gordon Moore rename the newly formed company 
         NM Electronics to Intel Corporation, laying the foundation for 
@@ -44,7 +94,7 @@
     <div>
       <h2>1971</h2>
       <h3>First Microprocessor</h3>
-      <img src="img/2.jpg" alt="Placeholder Image" />
+      <img src="img/2.jpg" alt="Intel 4004 microprocessor, the world's first commercial microprocessor" />
       <p>
         Intel debuts the 4004, the world's first commercial microprocessor, 
         igniting the microprocessor revolution and propelling the future 
@@ -56,7 +106,7 @@
     <div>
       <h2>1978</h2>
       <h3>8086 Processor</h3>
-      <img src="img/3.jpg" alt="Placeholder Image" />
+      <img src="img/3.jpg" alt="Intel 8086 processor that established the x86 architecture" />
       <p>
         Launch of the 8086 processor, establishing the x86 architecture 
         that drives countless PCs and servers in the modern era.
@@ -67,7 +117,7 @@
     <div>
       <h2>1985</h2>
       <h3>386 Processor</h3>
-      <img src="img/4.jpg" alt="Placeholder Image" />
+      <img src="img/4.jpg" alt="Intel 386 processor with 32-bit architecture" />
       <p>
         Intel introduces the 386 processor with 32-bit architecture, 
         ushering in a new era of performance and multitasking for 
@@ -79,7 +129,7 @@
     <div>
       <h2>2006</h2>
       <h3>Peak GHG Emissions</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
+      <img src="https://placehold.co/250x100" alt="Graph showing Intel's peak greenhouse gas emissions in 2006" />
       <p>
         This year marks Intel's highest annual greenhouse gas emissions 
         for operations. Over subsequent years, Intel invests heavily in 
@@ -92,7 +142,7 @@
     <div>
       <h2>2020</h2>
       <h3>RISE Strategy</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
+      <img src="https://placehold.co/250x100" alt="Intel RISE strategy logo representing Responsible, Inclusive, Sustainable, and Enabling initiatives" />
       <p>
         Intel launches its RISE (Responsible, Inclusive, Sustainable, 
         Enabling) strategy and 2030 goals, aiming to drive industry-wide 
@@ -104,7 +154,7 @@
     <div>
       <h2>2022</h2>
       <h3>Net-Zero By 2040</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
+      <img src="https://placehold.co/250x100" alt="Visual representation of Intel's net-zero emissions commitment by 2040" />
       <p>
         Intel announces its commitment to achieve net-zero greenhouse 
         gas emissions (Scope 1 and 2) across its global operations 
@@ -116,7 +166,7 @@
     <div>
       <h2>2023</h2>
       <h3>Renewable Electricity</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
+      <img src="https://placehold.co/250x100" alt="Renewable energy sources showing Intel's 99% renewable electricity achievement" />
       <p>
         The company achieves 99% renewable electricity usage worldwide, 
         helping to drastically lower carbon emissions and driving progress 
@@ -128,7 +178,7 @@
     <div>
       <h2>2024</h2>
       <h3>Sustainability Summit</h3>
-      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
+      <img src="https://placehold.co/250x100" alt="Intel Sustainability Summit with industry leaders collaborating on sustainable semiconductor manufacturing" />
       <p>
         Intel hosts its first Sustainability Summit, uniting suppliers, 
         government officials, and industry leaders to collaborate on 
@@ -138,54 +188,825 @@
   </section>
 
   <!-- 3-Column Content Section -->
-  <section>
-    <div>
+  <section class="py-5" aria-label="Sustainability initiatives overview">
+    <div class="container">
+      <div class="row g-4">
       
-      <!-- Column 1 -->
-      <div>
-        <h2>RISE Strategy</h2>
-        <p>
-          Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
-          Intel sets ambitious 2030 goals, including driving industry-wide 
-          progress on climate action, water stewardship, and waste reduction.
-        </p>
-        <!-- Learn More Button -->
-        <a href="#">Learn More</a>
-      </div>
+        <!-- Column 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="text-center h-100 d-flex flex-column">
+            <h2><i class="bi bi-graph-up-arrow text-primary me-2"></i>RISE Strategy</h2>
+            <p class="flex-grow-1">
+              Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
+              Intel sets ambitious 2030 goals, including driving industry-wide 
+              progress on climate action, water stewardship, and waste reduction.
+            </p>
+            <!-- Learn More Button -->
+            <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#riseModal">
+              Learn More <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
 
-      <!-- Column 2 -->
-      <div>
-        <h2>Commitment</h2>
-        <p>
-          In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
-          (Scope 1 and 2) by 2040. This commitment builds on decades of 
-          environmental initiatives and partnerships across the semiconductor 
-          industry.
-        </p>
-        <!-- Learn More Button -->
-        <a href="#">Learn More</a>
-      </div>
+        <!-- Column 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="text-center h-100 d-flex flex-column">
+            <h2><i class="bi bi-shield-check text-success me-2"></i>Commitment</h2>
+            <p class="flex-grow-1">
+              In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
+              (Scope 1 and 2) by 2040. This commitment builds on decades of 
+              environmental initiatives and partnerships across the semiconductor 
+              industry.
+            </p>
+            <!-- Learn More Button -->
+            <button type="button" class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#commitmentModal">
+              Learn More <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
 
-      <!-- Column 3 -->
-      <div>
-        <h2>Water &amp; Waste</h2>
-        <p>
-          Intel conserves billions of gallons of water annually and 
-          collaborates with local communities to restore watersheds.
-          Intel also upcycles and recycles materials to reduce waste and 
-          advance a circular economy.
-        </p>
-        <!-- Learn More Button -->
-        <a href="#">Learn More</a>
-      </div>
+        <!-- Column 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="text-center h-100 d-flex flex-column">
+            <h2><i class="bi bi-droplet-half text-info me-2"></i>Water &amp; Waste</h2>
+            <p class="flex-grow-1">
+              Intel conserves billions of gallons of water annually and 
+              collaborates with local communities to restore watersheds.
+              Intel also upcycles and recycles materials to reduce waste and 
+              advance a circular economy.
+            </p>
+            <!-- Learn More Button -->
+            <button type="button" class="btn btn-info mt-3" data-bs-toggle="modal" data-bs-target="#waterModal">
+              Learn More <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Carousel Section -->
+  <section class="py-5 bg-light" aria-label="Sustainability achievements carousel">
+    <div class="container">
+      <h2 class="text-center mb-4">
+        <i class="bi bi-images text-primary me-2"></i>
+        Key Sustainability Achievements
+      </h2>
+      
+      <div id="sustainabilityCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#sustainabilityCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#sustainabilityCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#sustainabilityCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#sustainabilityCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <img src="https://placehold.co/600x400/0071c5/white?text=Net-Zero+2040" class="d-block w-100 rounded" alt="Net-zero emissions goal by 2040">
+              </div>
+              <div class="col-md-6 p-4">
+                <h3><i class="bi bi-award-fill text-warning me-2"></i>Net-Zero by 2040</h3>
+                <p class="lead">Intel commits to achieving net-zero greenhouse gas emissions across global operations by 2040.</p>
+                <ul class="list-unstyled">
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Scope 1 & 2 emissions</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Renewable energy investments</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Industry-leading targets</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <img src="https://placehold.co/600x400/28a745/white?text=99%25+Renewable" class="d-block w-100 rounded" alt="99% renewable electricity achievement">
+              </div>
+              <div class="col-md-6 p-4">
+                <h3><i class="bi bi-lightning-charge-fill text-success me-2"></i>99% Renewable Electricity</h3>
+                <p class="lead">Achieved 99% renewable electricity usage worldwide in 2023, drastically reducing carbon footprint.</p>
+                <ul class="list-unstyled">
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Global renewable energy</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Solar and wind power</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Sustainable operations</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <img src="https://placehold.co/600x400/17a2b8/white?text=Water+Conservation" class="d-block w-100 rounded" alt="Water conservation initiatives">
+              </div>
+              <div class="col-md-6 p-4">
+                <h3><i class="bi bi-droplet-fill text-info me-2"></i>Water Stewardship</h3>
+                <p class="lead">Conserving billions of gallons annually while restoring watersheds in local communities.</p>
+                <ul class="list-unstyled">
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Watershed restoration</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Water recycling programs</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Community partnerships</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <img src="https://placehold.co/600x400/6f42c1/white?text=Circular+Economy" class="d-block w-100 rounded" alt="Circular economy and waste reduction">
+              </div>
+              <div class="col-md-6 p-4">
+                <h3><i class="bi bi-recycle text-success me-2"></i>Circular Economy</h3>
+                <p class="lead">Leading the way in waste reduction through innovative recycling and upcycling programs.</p>
+                <ul class="list-unstyled">
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Zero waste to landfill</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Material recovery</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Sustainable packaging</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#sustainabilityCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#sustainabilityCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion Section -->
+  <section class="py-5" aria-label="Frequently asked questions">
+    <div class="container">
+      <h2 class="text-center mb-4">
+        <i class="bi bi-question-circle-fill text-primary me-2"></i>
+        Frequently Asked Questions
+      </h2>
+      
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+          <div class="accordion" id="faqAccordion">
+            
+            <!-- FAQ 1 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                  <i class="bi bi-patch-question me-2"></i>
+                  What is Intel's RISE strategy?
+                </button>
+              </h3>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <strong>RISE stands for Responsible, Inclusive, Sustainable, and Enabling.</strong> Launched in 2020, 
+                  this comprehensive strategy sets ambitious 2030 goals across multiple areas including climate action, 
+                  water stewardship, waste reduction, diversity and inclusion, and digital readiness. Intel's RISE strategy 
+                  demonstrates our commitment to creating positive change not just within our company, but across the 
+                  entire technology ecosystem and the communities we serve.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                  <i class="bi bi-patch-question me-2"></i>
+                  How is Intel achieving net-zero emissions?
+                </button>
+              </h3>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Intel is pursuing net-zero greenhouse gas emissions (Scope 1 and 2) by 2040 through multiple initiatives:
+                  <ul class="mt-2">
+                    <li><strong>Renewable energy:</strong> Achieved 99% renewable electricity globally</li>
+                    <li><strong>Energy efficiency:</strong> Investing in innovative manufacturing technologies</li>
+                    <li><strong>Chemical abatement:</strong> Advanced systems to reduce process emissions</li>
+                    <li><strong>Green buildings:</strong> LEED-certified facilities worldwide</li>
+                    <li><strong>Sustainable transportation:</strong> EV charging stations and incentives</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                  <i class="bi bi-patch-question me-2"></i>
+                  What are Intel's water conservation efforts?
+                </button>
+              </h3>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Intel is a global leader in water stewardship. Our initiatives include:
+                  <ul class="mt-2">
+                    <li>Restoring <strong>billions of gallons</strong> of water annually to local watersheds</li>
+                    <li>Treating and reusing water in our manufacturing processes</li>
+                    <li>Collaborating with local communities on watershed restoration projects</li>
+                    <li>Implementing cutting-edge water recycling technologies</li>
+                    <li>Meeting or exceeding water quality standards before discharge</li>
+                  </ul>
+                  Our goal is to achieve net positive water use, meaning we return more clean water to communities than we consume.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                  <i class="bi bi-patch-question me-2"></i>
+                  How does Intel approach waste reduction?
+                </button>
+              </h3>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Intel follows a <strong>circular economy approach</strong> to minimize waste:
+                  <ul class="mt-2">
+                    <li><strong>Zero waste to landfill:</strong> Multiple sites have achieved this certification</li>
+                    <li><strong>Chemical recycling:</strong> Recovering and reusing chemicals from manufacturing</li>
+                    <li><strong>Material upcycling:</strong> Converting waste materials into valuable products</li>
+                    <li><strong>Sustainable packaging:</strong> Using recycled and recyclable materials</li>
+                    <li><strong>Product design:</strong> Designing for recyclability and longevity</li>
+                  </ul>
+                  We partner with suppliers and customers to extend circular economy practices across our value chain.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                  <i class="bi bi-patch-question me-2"></i>
+                  How can I stay updated on Intel's sustainability progress?
+                </button>
+              </h3>
+              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  There are several ways to follow Intel's sustainability journey:
+                  <ul class="mt-2">
+                    <li><strong>Subscribe to our newsletter</strong> (form below) for regular updates</li>
+                    <li>Read our annual <strong>Corporate Responsibility Report</strong></li>
+                    <li>Follow Intel on social media for real-time announcements</li>
+                    <li>Attend Intel Sustainability Summits and webinars</li>
+                    <li>Visit our sustainability website for detailed metrics and goals</li>
+                  </ul>
+                  We're committed to transparency and regularly share our progress, challenges, and lessons learned.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Subscription Form -->
-  <section>
-    <h2>Subscribe to our Newsletter</h2>
-    <!-- Add form here -->
+  <section class="py-5 bg-light" aria-label="Newsletter subscription">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+          <h2 class="text-center mb-4">
+            <i class="bi bi-envelope-heart text-primary me-2"></i>
+            Subscribe to our Newsletter
+          </h2>
+          <p class="text-center text-muted mb-4">
+            Stay updated on Intel's latest sustainability initiatives and innovations.
+          </p>
+          
+          <form aria-label="Newsletter subscription form" novalidate>
+            <!-- Name Input -->
+            <div class="mb-3">
+              <label for="subscriberName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="subscriberName" name="name" autocomplete="name" placeholder="Enter your name" required aria-required="true">
+            </div>
+
+            <!-- Email Input -->
+            <div class="mb-3">
+              <label for="subscriberEmail" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="subscriberEmail" name="email" autocomplete="email" placeholder="name@example.com" required aria-required="true" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+
+            <!-- Interests Checkboxes -->
+            <fieldset class="mb-3">
+              <legend class="form-label">Topics of Interest</legend>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="interestRISE" name="interests" value="RISE">
+                <label class="form-check-label" for="interestRISE">
+                  RISE Strategy & Goals
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="interestClimate" name="interests" value="climate">
+                <label class="form-check-label" for="interestClimate">
+                  Climate & Net-Zero Initiatives
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="interestWater" name="interests" value="water">
+                <label class="form-check-label" for="interestWater">
+                  Water Conservation & Waste Reduction
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Submit Button -->
+            <div class="d-grid">
+              <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#subscriptionModal">
+                <i class="bi bi-send-fill me-2"></i>Subscribe
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </section>
+
+  </main>
+  <!-- End Main Content -->
+
+  <!-- Modals Section -->
+  
+  <!-- RISE Strategy Modal -->
+  <div class="modal fade" id="riseModal" tabindex="-1" aria-labelledby="riseModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="riseModalLabel">
+            <i class="bi bi-graph-up-arrow me-2"></i>RISE Strategy
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6 class="fw-bold">Responsible, Inclusive, Sustainable, Enabling</h6>
+          <p>Launched in 2020, Intel's RISE strategy represents our commitment to creating a more responsible and inclusive world through technology.</p>
+          
+          <div class="row mt-4">
+            <div class="col-md-6 mb-3">
+              <div class="card h-100 border-primary">
+                <div class="card-body">
+                  <h6 class="card-title text-primary"><i class="bi bi-shield-check me-1"></i> Responsible</h6>
+                  <p class="card-text small">Championing human rights, ethical practices, and supply chain transparency.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="card h-100 border-success">
+                <div class="card-body">
+                  <h6 class="card-title text-success"><i class="bi bi-people me-1"></i> Inclusive</h6>
+                  <p class="card-text small">Building a diverse workforce and fostering equal opportunities for all.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="card h-100 border-info">
+                <div class="card-body">
+                  <h6 class="card-title text-info"><i class="bi bi-leaf me-1"></i> Sustainable</h6>
+                  <p class="card-text small">Leading climate action, water conservation, and circular economy initiatives.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="card h-100 border-warning">
+                <div class="card-body">
+                  <h6 class="card-title text-warning"><i class="bi bi-laptop me-1"></i> Enabling</h6>
+                  <p class="card-text small">Expanding digital readiness and technology access worldwide.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <h6 class="mt-4 fw-bold">2030 Goals</h6>
+          <ul>
+            <li>Achieve 100% renewable electricity globally</li>
+            <li>Restore more water than we consume</li>
+            <li>Zero waste to landfill across all sites</li>
+            <li>Double representation of women and underrepresented minorities</li>
+            <li>Enable 30 million people with digital skills</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Download Full Report</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Commitment Modal -->
+  <div class="modal fade" id="commitmentModal" tabindex="-1" aria-labelledby="commitmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title" id="commitmentModalLabel">
+            <i class="bi bi-shield-check me-2"></i>Net-Zero Commitment
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6 class="fw-bold">Intel's Path to Net-Zero by 2040</h6>
+          <p>In 2022, Intel announced our commitment to achieve net-zero greenhouse gas emissions across our global operations by 2040.</p>
+          
+          <div class="alert alert-success">
+            <i class="bi bi-check-circle-fill me-2"></i>
+            <strong>Current Progress:</strong> 99% renewable electricity achieved in 2023
+          </div>
+          
+          <h6 class="fw-bold mt-4">Key Initiatives</h6>
+          <div class="list-group">
+            <div class="list-group-item">
+              <div class="d-flex w-100 justify-content-between">
+                <h6 class="mb-1"><i class="bi bi-lightning-charge text-warning me-2"></i>Renewable Energy</h6>
+              </div>
+              <p class="mb-1 small">Investing in solar, wind, and other renewable energy sources globally.</p>
+            </div>
+            <div class="list-group-item">
+              <div class="d-flex w-100 justify-content-between">
+                <h6 class="mb-1"><i class="bi bi-gear text-primary me-2"></i>Energy Efficiency</h6>
+              </div>
+              <p class="mb-1 small">Advanced manufacturing processes that reduce energy consumption.</p>
+            </div>
+            <div class="list-group-item">
+              <div class="d-flex w-100 justify-content-between">
+                <h6 class="mb-1"><i class="bi bi-building text-success me-2"></i>Green Buildings</h6>
+              </div>
+              <p class="mb-1 small">LEED-certified facilities designed for sustainability.</p>
+            </div>
+          </div>
+          
+          <h6 class="fw-bold mt-4">Timeline</h6>
+          <ul>
+            <li><strong>2006:</strong> Peak GHG emissions - starting point for reduction efforts</li>
+            <li><strong>2023:</strong> Achieved 99% renewable electricity</li>
+            <li><strong>2030:</strong> Interim targets for emissions reduction</li>
+            <li><strong>2040:</strong> Net-zero emissions target</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success">View Climate Report</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Water & Waste Modal -->
+  <div class="modal fade" id="waterModal" tabindex="-1" aria-labelledby="waterModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header bg-info text-white">
+          <h5 class="modal-title" id="waterModalLabel">
+            <i class="bi bi-droplet-half me-2"></i>Water & Waste Management
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6 class="fw-bold">Water Stewardship</h6>
+          <p>Intel is committed to being a responsible water steward, conserving billions of gallons annually and restoring watersheds in our local communities.</p>
+          
+          <div class="row mb-4">
+            <div class="col-md-6">
+              <div class="card bg-light">
+                <div class="card-body text-center">
+                  <i class="bi bi-droplet-fill text-info" style="font-size: 2rem;"></i>
+                  <h3 class="mt-2">15+ Billion</h3>
+                  <p class="text-muted mb-0">Gallons conserved annually</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card bg-light">
+                <div class="card-body text-center">
+                  <i class="bi bi-recycle text-success" style="font-size: 2rem;"></i>
+                  <h3 class="mt-2">90%</h3>
+                  <p class="text-muted mb-0">Waste diverted from landfills</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <h6 class="fw-bold">Circular Economy Approach</h6>
+          <p>We're advancing a circular economy by:</p>
+          <ul>
+            <li>Upcycling and recycling materials from manufacturing</li>
+            <li>Designing products for longevity and recyclability</li>
+            <li>Partnering with suppliers on sustainable practices</li>
+            <li>Achieving zero waste to landfill at multiple sites</li>
+            <li>Innovating in sustainable packaging solutions</li>
+          </ul>
+          
+          <div class="alert alert-info">
+            <i class="bi bi-info-circle-fill me-2"></i>
+            <strong>Goal:</strong> Achieve net positive water use and zero waste to landfill globally by 2030.
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-info">Explore Programs</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Subscription Success Modal -->
+  <div class="modal fade" id="subscriptionModal" tabindex="-1" aria-labelledby="subscriptionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="subscriptionModalLabel">
+            <i class="bi bi-check-circle-fill me-2"></i>Subscription Confirmed!
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center py-4">
+          <i class="bi bi-envelope-check text-success" style="font-size: 4rem;"></i>
+          <h4 class="mt-3">Thank You for Subscribing!</h4>
+          <p class="text-muted">You'll receive updates on Intel's latest sustainability initiatives and innovations.</p>
+          <p class="mb-0"><small>Check your inbox for a confirmation email.</small></p>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Continue Exploring</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4" role="contentinfo" aria-label="Site footer">
+    <div class="container">
+      <div class="row">
+        <!-- Company Info -->
+        <div class="col-12 col-md-6 mb-3 mb-md-0">
+          <h5 class="mb-3">
+            <i class="bi bi-cpu text-primary me-2"></i>Intel Corporation
+          </h5>
+          <p class="text-light small">
+            Leading innovation in sustainability and technology since 1968.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-12 col-md-6">
+          <h5 class="mb-3">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <a href="#" class="text-light text-decoration-none">
+                <i class="bi bi-shield-lock me-1"></i>Privacy Policy
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="#" class="text-light text-decoration-none">
+                <i class="bi bi-file-text me-1"></i>Terms of Use
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="#" class="text-light text-decoration-none">
+                <i class="bi bi-envelope me-1"></i>Contact Us
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="#" class="text-light text-decoration-none">
+                <i class="bi bi-globe me-1"></i>Sustainability Report
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="border-secondary my-4">
+
+      <!-- Social Media & Copyright -->
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <p class="mb-0 text-light small">
+            &copy; 2026 Intel Corporation. All rights reserved.
+          </p>
+        </div>
+        
+        <div class="col-12 col-md-6 text-center text-md-end">
+          <a href="#" class="text-light me-3" aria-label="Visit Intel on Facebook">
+            <i class="bi bi-facebook fs-5"></i>
+          </a>
+          <a href="#" class="text-light me-3" aria-label="Follow Intel on Twitter">
+            <i class="bi bi-twitter-x fs-5"></i>
+          </a>
+          <a href="#" class="text-light me-3" aria-label="Connect with Intel on LinkedIn">
+            <i class="bi bi-linkedin fs-5"></i>
+          </a>
+          <a href="#" class="text-light" aria-label="Watch Intel on YouTube">
+            <i class="bi bi-youtube fs-5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+  <!-- Auto-Detect Language & Adjust Layout Script -->
+  <script>
+    /**
+     * Automatic RTL/LTR Language Detection and Layout Adjustment
+     * Detects language changes (including Google Translate) and applies appropriate text direction
+     */
+    (function() {
+      'use strict';
+
+      // List of RTL language codes (ISO 639-1)
+      const RTL_LANGUAGES = [
+        'ar',  // Arabic
+        'he',  // Hebrew
+        'fa',  // Persian/Farsi
+        'ur',  // Urdu
+        'yi',  // Yiddish
+        'iw',  // Hebrew (old code)
+        'ji',  // Yiddish (old code)
+        'ps',  // Pashto
+        'sd',  // Sindhi
+        'ug',  // Uyghur
+        'ku',  // Kurdish (some dialects)
+        'arc', // Aramaic
+        'ckb', // Central Kurdish (Sorani)
+        'dv'   // Dhivehi/Maldivian
+      ];
+
+      // Bootstrap CSS URLs
+      const BOOTSTRAP_LTR = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css';
+      const BOOTSTRAP_RTL = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css';
+
+      // Cache DOM elements
+      const htmlElement = document.documentElement;
+      const bootstrapLink = document.getElementById('bootstrap-css');
+
+      /**
+       * Check if a language code represents an RTL language
+       * @param {string} langCode - Language code (e.g., 'ar', 'en-US')
+       * @returns {boolean}
+       */
+      function isRTLLanguage(langCode) {
+        if (!langCode) return false;
+        // Extract the primary language code (e.g., 'ar' from 'ar-SA')
+        const primaryLang = langCode.toLowerCase().split('-')[0];
+        return RTL_LANGUAGES.includes(primaryLang);
+      }
+
+      /**
+       * Apply the appropriate text direction and Bootstrap CSS
+       * @param {string} langCode - Language code
+       */
+      function applyTextDirection(langCode) {
+        const isRTL = isRTLLanguage(langCode);
+        const newDir = isRTL ? 'rtl' : 'ltr';
+        const currentDir = htmlElement.getAttribute('dir');
+
+        // Only update if direction has changed
+        if (currentDir !== newDir) {
+          console.log(`Language changed to: ${langCode} - Applying ${newDir.toUpperCase()} layout`);
+          
+          // Update dir attribute
+          htmlElement.setAttribute('dir', newDir);
+          
+          // Swap Bootstrap CSS
+          const newBootstrapURL = isRTL ? BOOTSTRAP_RTL : BOOTSTRAP_LTR;
+          if (bootstrapLink && bootstrapLink.href !== newBootstrapURL) {
+            bootstrapLink.href = newBootstrapURL;
+            
+            // Update integrity attribute (remove for dynamic loading)
+            bootstrapLink.removeAttribute('integrity');
+          }
+
+          // Dispatch custom event for other scripts to react
+          window.dispatchEvent(new CustomEvent('directionChanged', {
+            detail: { direction: newDir, language: langCode }
+          }));
+        }
+      }
+
+      /**
+       * Detect current page language from multiple sources
+       * @returns {string}
+       */
+      function detectLanguage() {
+        // Priority order:
+        // 1. Google Translate sets the lang attribute on html element
+        // 2. Check for Google Translate iframe (indicates translation is active)
+        // 3. Browser language
+        
+        let lang = htmlElement.getAttribute('lang');
+        
+        // Check if Google Translate is active
+        const googleTranslateFrame = document.querySelector('.goog-te-banner-frame');
+        if (googleTranslateFrame) {
+          // Google Translate is active, use the current html lang attribute
+          lang = htmlElement.getAttribute('lang') || lang;
+        }
+        
+        // Fallback to browser language
+        if (!lang) {
+          lang = navigator.language || navigator.userLanguage || 'en';
+        }
+        
+        return lang;
+      }
+
+      /**
+       * Initialize the language detection and apply initial layout
+       */
+      function initialize() {
+        const currentLang = detectLanguage();
+        applyTextDirection(currentLang);
+        console.log('Language detection initialized. Current language:', currentLang);
+      }
+
+      /**
+       * Set up MutationObserver to watch for language changes
+       * This catches Google Translate and other dynamic language changes
+       */
+      function setupLanguageObserver() {
+        const observer = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'lang') {
+              const newLang = htmlElement.getAttribute('lang');
+              if (newLang) {
+                applyTextDirection(newLang);
+              }
+            }
+          });
+        });
+
+        // Observe changes to the lang attribute on the html element
+        observer.observe(htmlElement, {
+          attributes: true,
+          attributeFilter: ['lang']
+        });
+
+        console.log('Language observer started - watching for language changes');
+      }
+
+      /**
+       * Setup additional detection for Google Translate widget
+       */
+      function setupGoogleTranslateDetection() {
+        // Watch for the Google Translate widget to be added to the page
+        const bodyObserver = new MutationObserver(function(mutations) {
+          const translateWidget = document.querySelector('.goog-te-banner-frame, .goog-te-menu-frame');
+          if (translateWidget) {
+            console.log('Google Translate detected');
+            // Re-detect language after a short delay to allow Google Translate to set the lang attribute
+            setTimeout(() => {
+              const lang = detectLanguage();
+              applyTextDirection(lang);
+            }, 500);
+          }
+        });
+
+        bodyObserver.observe(document.body, {
+          childList: true,
+          subtree: true
+        });
+      }
+
+      /**
+       * Manual language switching function (can be called from UI)
+       * @param {string} langCode - Language code to switch to
+       */
+      window.switchLanguage = function(langCode) {
+        htmlElement.setAttribute('lang', langCode);
+        applyTextDirection(langCode);
+      };
+
+      // Initialize when DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+          initialize();
+          setupLanguageObserver();
+          setupGoogleTranslateDetection();
+        });
+      } else {
+        // DOM is already ready
+        initialize();
+        setupLanguageObserver();
+        setupGoogleTranslateDetection();
+      }
+
+      console.log('RTL/LTR Auto-Detection Script Loaded');
+    })();
+  </script>
 </body>
 </html>
