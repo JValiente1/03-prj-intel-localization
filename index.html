@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
-  <!-- Bootstrap RTL CSS (will be dynamically switched) -->
-  <link id="bootstrap-css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet" integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv" crossorigin="anonymous">
+  <!-- Bootstrap CSS (will be dynamically switched) -->
+  <link id="bootstrap-css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="style.css" />
@@ -56,16 +56,16 @@
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- Header / Hero Section -->
-  <header role="banner" aria-label="Page header">
-    <div>
-      <img src="img/intel-header-logo.svg" alt="Intel Logo" />
+  <header role="banner" aria-label="Page header" class="py-5">
+    <div class="container text-center">
+      <img src="img/intel-header-logo.svg" alt="Intel Logo" class="mb-4" style="max-width: 200px;" />
       <!-- Main Heading -->
       <h1>
         Sustainability Through the Ages
       </h1>
 
       <!-- Subheading / Description -->
-      <p>
+      <p class="lead text-muted">
         Explore Intel's journey through time, discovering how our commitment
         to innovation has shaped a more sustainable future for technology 
         and our planet.
@@ -77,7 +77,8 @@
   <main id="main-content" role="main">
 
   <!-- Timeline Cards Section -->
-  <section aria-label="Sustainability timeline from 1968 to 2024">
+  <section aria-label="Sustainability timeline from 1968 to 2024" class="py-5">
+    <div class="container">
     <!-- Card 1: 1968 -->
     <div>
       <h2>1968</h2>
@@ -185,6 +186,7 @@
         next-generation sustainable semiconductor manufacturing.
       </p>
     </div>
+    </div>
   </section>
 
   <!-- 3-Column Content Section -->
@@ -196,6 +198,7 @@
         <div class="col-12 col-md-6 col-lg-4">
           <div class="text-center h-100 d-flex flex-column">
             <h2><i class="bi bi-graph-up-arrow text-primary me-2"></i>RISE Strategy</h2>
+            <img src="https://placehold.co/400x250/0071c5/white?text=RISE+Strategy" alt="Intel RISE Strategy - Responsible, Inclusive, Sustainable, Enabling" class="img-fluid rounded mb-3">
             <p class="flex-grow-1">
               Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
               Intel sets ambitious 2030 goals, including driving industry-wide 
@@ -212,6 +215,7 @@
         <div class="col-12 col-md-6 col-lg-4">
           <div class="text-center h-100 d-flex flex-column">
             <h2><i class="bi bi-shield-check text-success me-2"></i>Commitment</h2>
+            <img src="https://placehold.co/400x250/28a745/white?text=Net-Zero+2040" alt="Intel's commitment to net-zero emissions by 2040" class="img-fluid rounded mb-3">
             <p class="flex-grow-1">
               In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
               (Scope 1 and 2) by 2040. This commitment builds on decades of 
@@ -229,6 +233,7 @@
         <div class="col-12 col-md-6 col-lg-4">
           <div class="text-center h-100 d-flex flex-column">
             <h2><i class="bi bi-droplet-half text-info me-2"></i>Water &amp; Waste</h2>
+            <img src="https://placehold.co/400x250/17a2b8/white?text=Water+Conservation" alt="Water conservation and waste reduction initiatives" class="img-fluid rounded mb-3">
             <p class="flex-grow-1">
               Intel conserves billions of gallons of water annually and 
               collaborates with local communities to restore watersheds.
@@ -356,7 +361,7 @@
       </h2>
       
       <div class="row justify-content-center">
-        <div class="col-12 col-lg-10">
+        <div class="col-12 col-lg-8">
           <div class="accordion" id="faqAccordion">
             
             <!-- FAQ 1 -->
