@@ -6,6 +6,31 @@ body {
   line-height: 1.6;
 }
 
+/* Keyboard navigation */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #0071c5;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #00a3e0;
+  outline-offset: 2px;
+}
+
 /* Header Styles */
 header.hero-intel {
   background: linear-gradient(135deg, #003c71 0%, #0071c5 55%, #00a3e0 100%);
@@ -115,6 +140,18 @@ section[aria-label*="timeline"] > .container > div p {
   section[aria-label*="timeline"] > .container > div {
     flex: 1 1 100%;
     max-width: 500px;
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+  }
+
+  section[aria-label*="timeline"] > .container > div {
+    transition: none;
   }
 }
 
